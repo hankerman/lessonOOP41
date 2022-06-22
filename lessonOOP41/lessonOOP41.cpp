@@ -27,6 +27,8 @@ int copy_if(T* srcB, T* srcE, T* destB, T* destE,
     return copyCount;
 }
 
+
+
 int main()
 {
     const int size{ 10 };
@@ -45,7 +47,7 @@ int main()
     std::cout << "arr2 copy of arr1 without sequencing "
         "duplicates:\n";
     arr2NewEnd = arr2Begin + copy_if(arr1Begin, arr1End,
-        arr2Begin, arr2End, NoSequence{});
+        arr2Begin, arr2End, NoSequence());
     print(arr2, arr2NewEnd);
     std::cout << '\n';
     return 0;
